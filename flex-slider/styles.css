@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-color: #ccc;
+  height: 100vh;
+}
+
+.warrior {
+  background-image: url('https://i.pinimg.com/originals/d6/de/80/d6de8009ddd131dfadc4778b0256a068.jpg');
+}
+
+.ranger {
+  background-image: url('https://phonoteka.org/uploads/posts/2021-06/1624736660_2-phonoteka_org-p-voin-oboi-krasivo-2.jpg');
+}
+
+.monk {
+  background-image: url('https://i.pinimg.com/originals/d7/d6/de/d7d6de91fd01933c5a63969b05f784be.jpg');
+}
+
+.wizard {
+  background-image: url('https://kartinkin.net/uploads/posts/2022-08/1661066471_18-kartinkin-net-p-volshebnik-charodei-oboi-krasivo-32.jpg');
+}
+
+.druid {
+  background-image: url('https://i.pinimg.com/originals/0a/14/18/0a14189fbf7e23fa3bbb4417e334d7ff.jpg');
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  position: relative;
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
+}
+
+.slide-header {
+  position: absolute;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 10;
+}
+
+.slide.active .slide-header{
+  opacity: 1;
+  transition: opacity .3s ease-in 0.4s;
+}
